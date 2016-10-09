@@ -7,9 +7,9 @@ This script takes a comma-delimited list of locations and uses k-means clusterin
 the approximate geographic center of the locations.
 
 The input is a .csv file containing the following column headers:
-"Name" - A unique identifier for each location
-"Lat" - The latitude of each location in decimal format
-"Lng" - The longitude of each location in decimal format
+* "Name" - A unique identifier for each location
+* "Lat" - The latitude of each location in decimal format
+* "Lng" - The longitude of each location in decimal format
 
 The script uses pamk() to determine the optimum value of k for k-means clustering. Once
 the value of k is found, kmeans() is called multiple times (10,000 by default) and the
