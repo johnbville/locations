@@ -26,3 +26,5 @@ from locations found in the input file, as well as the difference between the mi
 maximum distances. From these calculations, it also creates a plot showing which of the
 new locations has the lowest overall rankings in these categories.
 
+The the purposes of testing the script, please use any of the .csv files included in this
+repository.
