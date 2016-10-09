@@ -1,6 +1,8 @@
 # locations.r
 An R script to find the approximate center of a list of locations
+
 by John Bettonville
+
 2016-10-09
 
 This script takes a comma-delimited list of locations and uses k-means clustering to find
