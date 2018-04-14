@@ -32,7 +32,7 @@ require(wesanderson) # Wes Anderson color palletes just for fun
 require(here)
 
 # Read your input file
-mydata <- read.csv(file = here("sf market.csv", header = TRUE)
+mydata <- read.csv(file = here("sf market.csv"), header = TRUE)
 
 # Get the optimal number of clusters using pam for kmeans
 numclusters <- pamk(mydata[,2:3], krange=2:min((nrow(mydata)-1), 10))$nc
