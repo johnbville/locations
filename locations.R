@@ -21,19 +21,18 @@
 # Lat - Latitude of location
 # Lng - Longitude of location
 
-library(grid)
-library(gridExtra)
-library(ggmap)
-library(ggplot2)
-library(mapproj)
-library(fpc)
-library(cluster)
-library(wesanderson) # Wes Anderson color palletes just for fun
+require(grid)
+require(gridExtra)
+require(ggmap)
+require(ggplot2)
+require(mapproj)
+require(fpc)
+require(cluster)
+require(wesanderson) # Wes Anderson color palletes just for fun
+require(here)
 
-# Change working directory to wherever your data is
-setwd("~/_WORKING_DIRECTORY_")
 # Read your input file
-mydata <- read.csv("_INPUT_FILE_.csv", header = TRUE)
+mydata <- read.csv(file = here("sf market.csv", header = TRUE)
 
 # Get the optimal number of clusters using pam for kmeans
 numclusters <- pamk(mydata[,2:3], krange=2:min((nrow(mydata)-1), 10))$nc
@@ -93,7 +92,7 @@ distmatrix <- cbind.data.frame(mydata$Name, paste(mydata$Lat, mydata$Lng, sep="+
 
 # Use some domain knowledge to add in the names of the cities around the region we want
 
-numcity <- _INTEGER_ ### Change this based on the number of cities you want to examine!!
+numcity <- 8 ### Change this based on the number of cities you want to examine!!
 
 # Initialize the columns for as many cities as you plan to use
 distmatrix[,3:(numcity+2)] <- NA
